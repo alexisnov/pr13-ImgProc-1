@@ -21,10 +21,13 @@ public:
 private slots:
     void imgReady(QString name);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QVector<ImgProc*> threads;//Указатели на потоки
-
+     QString ext;//Фильтр изображений, расширение
     QDir dir;//Рабочая папка
+    int N;//Кол-во обработанных файлов
 };
 #endif // MAINWINDOW_H
